@@ -698,3 +698,68 @@ nav a:hover::after {
   .footer-bottom {
     padding: 20px;
   }
+  /* ===== CONTACTページ ===== */
+.contact-body {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 80px 48px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-label {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: #666;
+}
+
+.form-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #2a2a2a;
+  color: #ccc;
+  font-size: 13px;
+  padding: 10px 0;
+  outline: none;
+  letter-spacing: 0.05em;
+  transition: border-color 0.3s;
+  font-family: 'Georgia', serif;
+}
+
+.form-input:focus {
+  border-bottom-color: #e0003c;
+}
+
+.form-input option {
+  background: #111;
+}
+
+.form-textarea {
+  resize: none;
+  height: 120px;
+}
+
+.form-submit {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.contact-thanks {
+  display: none;
+  text-align: center;
+  padding: 80px 0;
+  color: #888;
+  font-size: 14px;
+  line-height: 2.5;
+  letter-spacing: 0.1em;
+}
