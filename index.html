@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DARK ROSE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">DARK ROSE</h1>
+    <nav>
+      <a href="#">COLLECTION</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="#" id="cart-open">CART <span class="cart-count" id="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>NEW COLLECTION</h2>
+      <p>闇に咲く、美の衝動。</p>
+      <a href="#" class="btn">SHOP NOW</a>
+    </section>
+
+    <section class="products">
+      <h2 class="section-title">COLLECTION</h2>
+
+      <div class="product-grid">
+
+        <div class="product-card"
+          data-name="SHADOW DRESS"
+          data-price="¥18,000"
+          data-img="images/item1.png"
+          data-desc="闇を纏う、究極のシルエット。深夜の静寂に溶け込むような漆黒のドレス。">
+          <img class="product-img" src="images/item1.png" alt="SHADOW DRESS">
+          <div class="product-info">
+            <p class="product-name">SHADOW DRESS</p>
+            <p class="product-price">¥18,000</p>
+            <button class="cart-btn" data-name="SHADOW DRESS" data-price="18000">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card"
+          data-name="THORN CORSET"
+          data-price="¥24,000"
+          data-img="images/item2.png"
+          data-desc="鋭く、妖艶に。肋骨を想わせるボーンディテールが官能的なラインを生む。">
+          <img class="product-img" src="images/item2.png" alt="THORN CORSET">
+          <div class="product-info">
+            <p class="product-name">THORN CORSET</p>
+            <p class="product-price">¥24,000</p>
+            <button class="cart-btn" data-name="THORN CORSET" data-price="24000">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card"
+          data-name="VEIL JACKET"
+          data-price="¥32,000"
+          data-img="images/item3.png"
+          data-desc="透ける闇。シースルー素材が纏う者の輪郭を幻想的に浮かび上がらせる。">
+          <img class="product-img" src="images/item3.png" alt="VEIL JACKET">
+          <div class="product-info">
+            <p class="product-name">VEIL JACKET</p>
+            <p class="product-price">¥32,000</p>
+            <button class="cart-btn" data-name="VEIL JACKET" data-price="32000">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <p class="footer-logo">DARK ROSE</p>
+      <p class="footer-tagline">闇に咲く、美の衝動。</p>
+    </div>
+
+    <div class="footer-links">
+      <p class="footer-heading">MENU</p>
+      <a href="#">COLLECTION</a>
+      <a href="#">ABOUT</a>
+      <a href="#">CONTACT</a>
+    </div>
+
+    <div class="footer-links">
+      <p class="footer-heading">INFO</p>
+      <a href="#">SIZE GUIDE</a>
+      <a href="#">SHIPPING</a>
+      <a href="#">RETURNS</a>
+    </div>
+
+    <div class="footer-links">
+      <p class="footer-heading">FOLLOW</p>
+      <a href="#">INSTAGRAM</a>
+      <a href="#">X / TWITTER</a>
+      <a href="#">TIKTOK</a>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 DARK ROSE. ALL RIGHTS RESERVED.</p>
+  </div>
+</footer>
+
+<div class="cart-panel" id="cart-panel">
+  <div class="cart-header">
+    <p class="cart-title">CART</p>
+    <button class="cart-panel-close" id="cart-panel-close">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items">
+    <p class="cart-empty">カートに商品がありません</p>
+  </div>
+  <div class="cart-footer" id="cart-footer" style="display:none;">
+    <div class="cart-total">
+      <span>TOTAL</span>
+      <span id="cart-total-price">¥0</span>
+    </div>
+    <button class="btn" style="width:100%; text-align:center;">CHECKOUT</button>
+  </div>
+</div>
+<div class="cart-overlay" id="cart-overlay"></div>
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-body">
+        <img class="modal-img" id="modal-img" src="" alt="">
+        <div class="modal-info">
+          <p class="modal-name" id="modal-name"></p>
+          <p class="modal-price" id="modal-price"></p>
+          <p class="modal-desc" id="modal-desc"></p>
+
+        <div class="size-selector">
+          <p class="size-label">SIZE</p>
+          <div class="size-options" id="size-options">
+            <button class="size-btn" data-size="XS">XS</button>
+            <button class="size-btn" data-size="S">S</button>
+            <button class="size-btn" data-size="M">M</button>
+            <button class="size-btn" data-size="L">L</button>
+            <button class="size-btn" data-size="XL">XL</button>
+          </div>
+        </div>
+
+          <button class="cart-btn" id="modal-cart-btn">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

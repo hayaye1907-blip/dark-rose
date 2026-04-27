@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONTACT — DARK ROSE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="logo"><a href="index.html" style="color:inherit; text-decoration:none;">DARK ROSE</a></h1>
+    <nav>
+      <a href="index.html">COLLECTION</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="#">CART</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="about-hero">
+      <h2 class="about-title">CONTACT</h2>
+      <p class="about-sub">お問い合わせ</p>
+    </section>
+
+    <section class="contact-body">
+
+      <form class="contact-form" id="contact-form">
+
+        <div class="form-group">
+          <label class="form-label">NAME</label>
+          <input class="form-input" type="text" placeholder="お名前" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">EMAIL</label>
+          <input class="form-input" type="email" placeholder="メールアドレス" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">SUBJECT</label>
+          <select class="form-input">
+            <option value="">お問い合わせ種別を選択</option>
+            <option value="order">注文について</option>
+            <option value="shipping">配送について</option>
+            <option value="return">返品・交換について</option>
+            <option value="other">その他</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">MESSAGE</label>
+          <textarea class="form-input form-textarea" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+        </div>
+
+        <button class="btn form-submit" type="submit">SEND MESSAGE</button>
+
+      </form>
+
+      <div class="contact-thanks" id="contact-thanks">
+        <p>お問い合わせありがとうございます。</p>
+        <p>3営業日以内にご返信いたします。</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo">DARK ROSE</p>
+        <p class="footer-tagline">闇に咲く、美の衝動。</p>
+      </div>
+      <div class="footer-links">
+        <p class="footer-heading">MENU</p>
+        <a href="index.html">COLLECTION</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+      <div class="footer-links">
+        <p class="footer-heading">INFO</p>
+        <a href="#">SIZE GUIDE</a>
+        <a href="#">SHIPPING</a>
+        <a href="#">RETURNS</a>
+      </div>
+      <div class="footer-links">
+        <p class="footer-heading">FOLLOW</p>
+        <a href="#">INSTAGRAM</a>
+        <a href="#">X / TWITTER</a>
+        <a href="#">TIKTOK</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 DARK ROSE. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('contact-thanks').style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
