@@ -139,3 +139,26 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+// スクロール時に要素をフェードイン
+  const scrollElements = document.querySelectorAll(
+    '.product-card, .section-title, .footer-inner'
+  );
+
+  scrollElements.forEach(el => {
+    el.classList.add('scroll-hidden');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('scroll-visible');
+        }, i * 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  scrollElements.forEach(el => {
+    observer.observe(el);
+  });
