@@ -548,7 +548,97 @@ footer {
   line-height: 2.2;
   letter-spacing: 0.05em;
 }
+/* ===== アニメーション定義 ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===== ページ読み込み時のフェードイン ===== */
+.logo {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+nav {
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.hero h2 {
+  animation: fadeInUp 0.8s ease 0.3s forwards;
+  opacity: 0;
+}
+
+.hero p {
+  animation: fadeInUp 0.8s ease 0.5s forwards;
+  opacity: 0;
+}
+
+.hero .btn {
+  animation: fadeInUp 0.8s ease 0.7s forwards;
+  opacity: 0;
+}
+
+/* ===== スクロール時のフェードイン（JS側で制御） ===== */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scroll-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== ホバーエフェクト強化 ===== */
+.product-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(224, 0, 60, 0.1);
+}
+
+.product-img {
+  transition: transform 0.6s ease;
+  overflow: hidden;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.03);
+}
+
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #e0003c;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
 @media (max-width: 768px) {
 
   /* ヘッダー */
